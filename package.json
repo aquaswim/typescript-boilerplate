@@ -9,7 +9,8 @@
         "test": "mocha -r ts-node/register --exit",
         "coverage": "nyc -x \"**/*.spec.ts\" npm run test",
         "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
-        "style": "prettier --write ."
+        "style": "prettier --write .",
+        "style:check": "prettier --check ."
     },
     "keywords": [
         "awesome"
