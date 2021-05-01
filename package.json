@@ -7,7 +7,10 @@
         "start": "node dist",
         "dev": "ts-node-dev --rs --respawn src",
         "test": "mocha -r ts-node/register --exit",
-        "coverage": "nyc -x \"**/*.spec.ts\" npm run test"
+        "coverage": "nyc -x \"**/*.spec.ts\" npm run test",
+        "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+        "style": "prettier --write .",
+        "style:check": "prettier --check ."
     },
     "keywords": [
         "awesome"
@@ -19,9 +22,14 @@
         "@types/chai": "^4.2.16",
         "@types/mocha": "^8.2.2",
         "@types/node": "^14.14.37",
+        "@typescript-eslint/eslint-plugin": "^4.22.0",
+        "@typescript-eslint/parser": "^4.22.0",
         "chai": "^4.3.4",
+        "eslint": "^7.25.0",
+        "eslint-config-prettier": "^8.3.0",
         "mocha": "^8.3.2",
         "nyc": "^15.1.0",
+        "prettier": "2.2.1",
         "ts-node-dev": "^1.1.6",
         "typescript": "^4.2.3"
     },
