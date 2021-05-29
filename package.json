@@ -6,7 +6,8 @@
         "build": "tsc",
         "start": "node dist",
         "dev": "ts-node-dev --rs --respawn src",
-        "test": "xo && mocha -r ts-node/register --exit",
+        "test": "xo && mocha --exit",
+        "test:watch": "mocha --watch",
         "coverage": "nyc -x \"**/*.spec.ts\" npm run test"
     },
     "keywords": [
@@ -27,7 +28,10 @@
         "xo": "^0.40.1"
     },
     "mocha": {
-        "spec": "./src/**/*.spec.ts"
+        "spec": "./src/**/*.spec.ts",
+        "require": "ts-node/register",
+        "extensions": ["ts", "tsx"],
+        "watch-files": "src"
     },
     "xo": {
         "space": true,
